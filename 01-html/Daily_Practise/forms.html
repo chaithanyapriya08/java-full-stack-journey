@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form</title>
+  </head>
+  <body >
+      
+    <h2>Form</h2>
+     <table  width="400px" height="300px" border="1" >
+        <td > <form>
+      <label>Name :</label>
+      <input type="text" placeholder="only capital letters" value="Hero" />
+      <br />
+      <label>Password</label>
+      <input type="password" placeholder="Enter your Password" /> <br />
+      <label>DOB</label>
+      <input type="date" placeholder="dd/mm/yy" /> <br />
+      <label>Age</label>
+      <input type="number" placeholder="Enter Your Age" /><br />
+      <label>Gmail</label>
+      <input type="email" value="@gmail.com" /> <br />
+      <label>Phone Number</label>
+      <input type="tel" placeholder="Enter Your Number" />
+    </form> 
+    <form>
+        <label>Choose your Gender</label>
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female">Female
+        <input type="radio" name="gender" value="Other">Other<br>
+        <label>Select Your HObbies</label><br>
+        <input type="checkbox" name="hobbies" value="book">Reading Books<br>
+        <input type="checkbox" name="hobbies" value="sports">sports <br>
+        <input type="checkbox" name="hobbies" value="Arts">Arts
+    </form></td>
+      </tr>
+    </table>
+
+    <br>
+    <br>
+    <h2>Textarea</h2>
+     <form>
+      <label>Your Feedback </label>
+      <textarea ></textarea>
+    </form> 
+    
+<br>
+<br>
+
+    <h2>form using the Fieldset</h2>
+     <fieldset><label>Name :</label>
+      <legend>Personal Information</legend>
+      <input type="text" placeholder="only capital letters" value="Hero" />
+      <br />
+      <label>Password</label>
+      <input type="password" placeholder="Enter your Password" /> <br />
+      <label>DOB</label>
+      <input type="date" placeholder="dd/mm/yy" /> <br />
+      <label>Age</label>
+      <input type="number" placeholder="Enter Your Age" /><br />
+    </fieldset>
+     
+      <fieldset>
+      <legend>Contact Details</legend>
+      <label>Gmail</label>
+      <input type="email" value="@gmail.com" /> <br />
+      <label>Phone Number</label>
+      <input type="tel" placeholder="Enter Your Number" /> <br>
+      <label>Address</label>
+      <textarea row="15" cols="50"></textarea>
+      </fieldset>
+    </form> 
+
+    <br>
+    <br>
+    <h2>Action attribute</h2>
+     <form action="success.html">
+      <label>Username</label>
+      <input type="text" placeholder="enter your name" required> <br>
+      <label>Password</label>
+      <input type="text" placeholder="enter your password" required> <br>
+      <input type="submit" value="login">
+    </form> 
+
+    <br>
+    <br>
+
+    <h2>checkbox</h2>
+     <form>
+      <label>Select your hobbies</label><br>
+      <input type="checkbox" name="hobbies" value="books">Reading Book<br>
+      <input type="checkbox" name="hobbies" value="sports">Sports<br>
+      <input type="checkbox" name="hobbies" value="art">Artrs
+    </form> 
+
+<br>
+<br>
+<h2>Dropdown</h2> 
+    <form>
+      <label>select your state</label>
+      <select name="state">
+        <option value="TG">TG</option>
+          <option value="AP">AP</option>
+            <option value="AM">AM</option>
+      </select>
+    </form> 
+  </body>
+</html>
