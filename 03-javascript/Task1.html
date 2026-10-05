@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+    <style>
+        *{
+           box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            padding-top: 3%;
+            background-color:white;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10%;
+            width: 90%;
+            height: 90%;
+        }
+
+        h1 {
+            color:orangered;
+            font-size: 45px;
+            /* text-shadow: 3px 5px 10px rgb(92, 92, 43); */
+        }
+
+        label {
+            color:black;
+            font-size: 20px;
+        }
+
+        input {
+            height: 25px;
+            width: 100%;
+            color: white;
+            background-color: 	#f4a46f;
+            border: none;
+            padding-left: 2%;
+        }
+
+        button {
+            font-size: 20px;
+            background-image: linear-gradient(to right,rgb(240, 95, 42),rgb(214, 203, 146),orangered);
+            color:white;
+            border: none;
+            height: 30px;
+            width: 100px;
+            border-radius: 10px;
+        }
+          .cards {
+             text-align: center;
+             width: 100%;
+            height: auto;
+            margin-top: 2%;
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-bottom: 5%;
+            padding: 5%;
+            display: flex; 
+            flex-wrap: wrap;           
+            justify-content: center;
+            align-items: center;
+            gap: 10%;
+            background-color:orangered;
+            border-radius: 10px;
+            box-shadow: 5px 5px 20px rgb(236, 16, 16);
+        }
+
+        .card {
+            width: 60%;
+            height: auto;
+            padding: 3%;
+            margin-bottom: 3%;
+            text-align: center;
+            background-color: whitesmoke;
+            border-radius: 5px;
+            box-shadow: 8px 8px 20px rgb(240, 232, 232);
+        }
+        .card1{
+            text-align: left;
+        }
+        h2{
+            font-size: 28px;
+            color:orangered;
+            /* text-shadow: 2px 2px 5px rgb(69, 69, 69); */
+        }
+         input:focus{
+            background-color: rgb(137, 135, 135);
+             
+        }
+        .line{
+            width: 90%;
+            height: 3px;
+            background-image: linear-gradient(to right,transparent,goldenrod,transparent);
+        }
+        p{
+            font-size: 20px;
+            color: black;
+        }
+         @media (min-width:750px)
+         {
+            .cards {
+            width: 100%;
+            height: 100%;
+            display: flex; 
+            flex-wrap: wrap;           
+            justify-content: center;
+            align-items: center;
+            gap: 10%;
+        }
+
+        .card {
+            width: 40%;
+             margin-bottom: 2%;
+        }
+        .card1{
+            text-align: left;
+        }
+         }
+         
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>TASK-1</h1>
+        <div class="line"></div>
+        <br>
+    </div>
+    <div class="cards">      
+            <div class="card">
+                <h2>Average Of Three Numbers</h2><br>
+                <div class="card1">
+                    <label>Enter first number : </label>
+                    <input type="number" placeholder="EX:10" id="num1"><br><br>
+                    <label>Enter second number : </label>
+                    <input type="number" placeholder="EX:20" id="num2"><br><br>
+                    <label>Enter third number : </label>
+                    <input type="number" placeholder="EX:40" id="num3"><br><br>
+                    <button onclick="task1()">Average</button><br><br>
+                    <p id="res1"></p>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Average Of Three Numbers Using DOM</h2><br>
+                <div class="card1">
+                    <label>Enter first number : </label>
+                    <input type="number" placeholder="EX:10" id="num11"><br><br>
+                    <label>Enter second number : </label>
+                    <input type="number" placeholder="EX:20" id="num21"><br><br>
+                    <label>Enter third number : </label>
+                    <input type="number" placeholder="EX:40" id="num31"><br><br>
+                    <button onclick="task2()">Average</button><br><br>
+                    <p id="res2"></p>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Sum of first n natural numbers</h2><br>
+                <div class="card1">
+                    <label>Enter number</label>
+                    <input type="number" placeholder="ex:3" id="n"><br><br>
+                    <button onclick="task3()">calculate</button><br><br>
+                    <p id="res3"></p>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Average of first n natural numbers</h2><br>
+                <div class="card1">
+                    <label>Enter number</label>
+                    <input type="number" placeholder="ex:3" id="x"><br><br>
+                    <button onclick="task4()">calculate</button><br><br>
+                    <p id="res4"></p>
+                </div>
+            </div>
+       
+            <div class="card">
+                <h2>Profit Percentage </h2><br>
+                <div class="card1">
+                    <label>Cost Price : </label>
+                    <input type="number" id="cp"><br><br>
+                    <label>Selling Price : </label>
+                    <input type="number" id="sp"><br><br>
+                    <button onclick="task5()">Profit % </button><br><br>
+                    <p id="res5"></p>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Simple Inetrest</h2><br>
+                <div class="card1">
+                    <label>Principal Amount : </label>
+                    <input type="number" id="pa"><br><br>
+                    <label>Period : </label>
+                    <input type="number" id="p"><br><br>
+                    <label>Rate Of Inetrest : </label>
+                    <input type="number" id="I"><br><br>
+                    <button onclick="task6()">Inetrest</button><br><br>
+                    <p id="res6"></p>
+                </div>
+            </div>
+       
+            <div class="card">
+                <h2>Missing angle of a triangle</h2><br>
+                <div class="card1">
+                    <label>Angle1 : </label>
+                    <input type="number" id="A1"><br><br>
+                    <label>Angle2 : </label>
+                    <input type="number" id="A2"><br><br>
+                    <button onclick="task7()">calculate</button><br><br>
+                    <p id="res7"></p>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Last digit of a number</h2><br>
+                <div class="card1">
+                    <label>Enter number : </label>
+                    <input type="number" id="y"><br><br>
+                    <button onclick="task8()">calculate</button><br><br>
+                    <p id="res8"></p>
+                </div>
+            </div>
+        
+            <div class="card">
+                <h2>Remove last digit of a number</h2><br>
+                <div class="card1">
+                    <label>Enter number : </label>
+                    <input type="number" id="z"><br><br>
+                    <button onclick="task9()">calculate</button><br><br>
+                    <p id="res9"></p>
+                </div>
+            </div>
+            <div class="card">
+                <h2>First digit of a 3-digit number</h2><br>
+                <div class="card1">
+                    <label>Enter 3-digit number : </label>
+                    <input type="number" id="a"><br><br>
+                    <button onclick="task10()">calculate</button><br><br>
+                    <p id="res10"></p>
+                </div>
+            </div>
+       
+            <div class="card">
+                <h2>First digit of a 5-digit number</h2><br>
+                <div class="card1">
+                    <label>Enter 5-digit number : </label>
+                    <input type="number" id="b"><br><br>
+                    <button onclick="task11()">calculate</button><br><br>
+                    <p id="res11"></p>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Converting Celsius to Fahrenheit</h2><br>
+                <div class="card1">
+                    <label>Enter temperature in Celsius : </label>
+                    <input type="number" id="c"><br><br>
+                    <button onclick="task12()">calculate</button><br><br>
+                    <p id="res12"></p>
+                </div>
+            </div>
+       
+            <div class="card">
+                <h2>Converting Fahrenheit to Celsius</h2><br>
+                <div class="card1">
+                    <label>Enter temperature in Fahrenheit : </label>
+                    <input type="number" id="d"><br><br>
+                    <button onclick="task13()">calculate</button><br><br>
+                    <p id="res13"></p>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Gross salary</h2><br>
+                <div class="card1">
+                    <label>Enter Basic Salary : </label>
+                    <input type="number" id="bs"><br><br>
+                    <label>HRA : </label>
+                    <input type="number" id="h"><br><br>
+                    <label>DA : </label>
+                    <input type="number" id="da"><br><br>
+                    <button onclick="task14()">Gross Salary</button><br><br>
+                    <p id="res14"></p>
+                </div>
+            </div>
+       
+            <div class="card">
+                <h2>Swap two numbers using a third variable</h2><br>
+                <div class="card1">
+                    <label>Enter first number : </label>
+                    <input type="number" id="b1"><br><br>
+                    <label>Enter second number : </label>
+                    <input type="number" id="b2"><br><br>
+                    <button onclick="task15()">Swap</button><br><br>
+                    <p id="res15"></p>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Swap two numbers without using a third variable</h2><br>
+                <div class="card1">
+                    <label>Enter first number : </label>
+                    <input type="number" id="c1"><br><br>
+                    <label>Enter second number : </label>
+                    <input type="number" id="c2"><br><br>
+                    <button onclick="task16()">Swap</button><br><br>
+                    <p id="res16"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="Task1.js"></script>
+</body>
+
+</html>
