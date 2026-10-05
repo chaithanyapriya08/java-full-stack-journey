@@ -1,0 +1,993 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    min-height: 100vh;
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.1),
+            rgba(0, 0, 0, 0.1) ),
+        url("./images/home-bg.avif");
+
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background-color: white;
+    width: 100%;
+}
+
+.top-bar {
+    background-color: #452001;
+    color: white;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.navbar {
+    height: 90px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #2F2A26;
+}
+
+.logo span {
+    color: #d0ae7d;
+}
+
+.nav-links {
+    display: flex;
+    margin-top: 20px;
+}
+
+.nav-links a {
+    color: #333;
+    font-size: 25px;
+    margin-right: 25px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: #452001;
+}
+
+.hero {
+    display: flex;
+    padding: 15px;
+}
+
+.hero-content {
+    width: 55%;
+    color: white;
+    position: relative;
+    top: 150px;
+}
+
+.hero-content p {
+    font-size: 25px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.hero-content h1 {
+    font-size: 65px;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+}
+
+.btn {
+    padding: 14px 25px;
+    display: inline-block;
+    margin: 15px;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background-color: #452001;
+    font-size: 20px;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: white;
+    color: #333;
+}
+
+.btn-light {
+    background-color: white;
+    font-size: 20px;
+    color: #333;
+}
+
+.btn-light:hover {
+    background-color: #452001;
+    color: white;
+}
+
+.booking-section {
+    padding: 0 8%;
+    margin-top: 300px;
+    position: relative;
+    z-index: 10;
+}
+
+.booking-box {
+    background-color: #9876549e;
+    padding: 10px 30px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.074);
+    height: auto;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    border-radius: 25px;
+}
+
+.booking-title {
+    width: 100%;
+    font-size: 40px;
+    color: #452001;
+}
+
+.booking-item {
+    flex: 1;
+    min-width: 180px;
+    margin: 15px;
+}
+
+.booking-item label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 25px;
+    color: beige;
+}
+
+.booking-item input,
+.booking-item select {
+    width: 100%;
+    padding: 13px;
+    font-size: 20px;
+    background-color: #afa8a8;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+.booking-button {
+    background-color: #452001;
+    color: white;
+    border: none;
+    height: 50px;
+    padding: 13px;
+    margin-top: 50px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.services {
+    margin-top: 25px;
+    padding: 5px 8%;
+    text-align: center;
+}
+
+.section-small-title {
+    color: white;
+    font-size: 25px;
+ margin-bottom: 10px;
+}
+
+.section-title {
+    font-size: 45px;
+    color: #452001;
+    margin-bottom: 20px;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    width: 30%;
+    height: auto;
+    min-width: 250px;
+    padding: 30px 20px;
+    margin: 25px;
+    background-color: white;
+    transition: 0.2s;
+}
+
+.service-card:hover {
+    width: 32%;
+    height: 480px;
+}
+
+.service-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.service-card h3 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #5C4033;
+}
+
+.service-card p {
+    color: #6B4F3A;
+    font-size: 25px;
+    line-height: 1.7;
+}
+
+.rooms {
+    background-color: #987654c9;
+    padding: 100px 100px;
+    text-align: center;
+}
+
+.rooms-container {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.room-card {
+    width: 380px;
+    height: 450px;
+    margin: 25px;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: 1s;
+}
+
+.room-card:hover {
+    transform: rotateY(180deg);
+}
+
+.room-card-front,
+.room-content-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    backface-visibility: hidden;
+}
+
+.room-card-front {
+    background: white;
+    overflow: hidden;
+}
+
+.room-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.room-content-back {
+    background: #48260ac3;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+}
+
+.room-content-back .room-price {
+    color: rgb(196, 148, 28);
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.room-content-back h3 {
+    color: #FFFFFF;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.room-content-back .room-details {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    color: #F5E6D3;
+    font-size: 20px;
+}
+
+.room-content-back .room-details span {
+    margin-bottom: 8px;
+}
+
+.room-content-back .room-btn {
+    font-size: 20px;
+    margin-top: 20px;
+    display: inline-block;
+    color: rgb(196, 148, 28);
+}
+
+.testimonial {
+    padding: 100px 8%;
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+.testimonial .section-small-title {
+    color: black;
+}
+
+.testimonial-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    width: 550px;
+    min-width: 250px;
+    height: 300px;
+    padding: 30px;
+    margin: 15px;
+    background-color: white;
+    text-align: left;
+    transition: all 1s ease-in;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-25px);
+}
+
+.testimonial-card p {
+    color: #777;
+    font-size: 25px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.client {
+    display: flex;
+    align-items: center;
+}
+
+.client img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.client h4 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.client span {
+    color: #c5a880;
+    font-size: 18px;
+}
+
+.about-section {
+    display: flex;
+    min-height: 500px;
+}
+
+.about-image {
+    width: 50%;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-content {
+    width: 50%;
+    background-color: #c5a880;
+    color: white;
+    padding: 100px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-content h2 {
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
+.about-content p {
+    font-size: 20px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.offer {
+    padding: 100px 8%;
+    text-align: center;
+    background-color: rgba(245, 245, 245, 0.329);
+}
+
+.offer-container {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.offer-card {
+    width: 22%;
+    min-width: 220px;
+    padding: 25px;
+    margin: 10px;
+    background-color: #7c573c;
+}
+
+.offer-card h3 {
+    font-size: 30px;
+    margin: 15px 0;
+}
+
+.offer-card p {
+    font-size: 20px;
+    color: white;
+    line-height: 1.7;
+}
+
+.offer-icon {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+footer {
+    background-color: #5f2c02;
+    color: #aaa;
+    padding: 80px 8% 30px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-box {
+    width: 22%;
+    min-width: 200px;
+    margin-bottom: 30px;
+}
+
+.footer-box h2,
+.footer-box h3 {
+    color: black;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.footer-box p {
+    font-size: 25px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.footer-box > a {
+    display: block;
+    color: white;
+    font-size: 25px;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.footer-box > a:hover {
+    color: goldenrod;
+}
+
+.footer-box input {
+    width: 100%;
+    padding: 13px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+.footer-box button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.footer-box button:hover {
+    background-color: white;
+    color: #333;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tags span {
+    border: 1px solid #555;
+    padding: 7px 10px;
+    font-size: 18px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    transition: 0.3s;
+}
+
+.tags span:hover {
+    background-color: #c5a880;
+    color: #ffffff;
+    border-color: #c5a880;
+}
+
+.follow-title {
+    margin-top: 30px;
+}
+
+.social-links {
+    display: flex;
+}
+
+.social-links a {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background-color: #c5a880;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    margin-top: 60px;
+    padding-top: 25px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 20px;
+}
+
+
+@media (max-width: 767px) {
+
+    .top-bar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+
+    .top-bar div {
+        margin-bottom: 5px;
+    }
+    .navbar {
+        height: auto;
+        padding: 20px 15px;
+        flex-direction: column;
+    }
+
+    .logo {
+        font-size: 26px;
+        margin-bottom: 15px;
+    }
+
+    .nav-links {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 0;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+        margin-right: 12px;
+        margin-bottom: 10px;
+    }
+    .hero {
+        min-height: 450px;
+        padding: 30px 20px;
+        align-items: center;
+    }
+
+    .hero-content {
+        width: 100%;
+        top: 0;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 12px 20px;
+        margin: 8px;
+    }
+    .booking-section {
+        margin-top: 30px;
+        padding: 0 15px;
+    }
+
+    .booking-box {
+        width: 100%;
+        height: auto;
+        padding: 25px 20px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .booking-title {
+        width: 100%;
+        font-size: 28px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .booking-item {
+        width: 100%;
+        min-width: 0;
+        margin: 10px 0;
+        flex: none;
+    }
+
+    .booking-item label {
+        font-size: 18px;
+    }
+
+    .booking-item input,
+    .booking-item select {
+        width: 100%;
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .booking-button {
+        width: 100%;
+        height: 50px;
+        margin: 15px 0 0;
+        font-size: 16px;
+    }
+
+    .section-small-title {
+        font-size: 18px;
+    }
+
+    .section-title {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+    .services {
+        padding: 50px 15px;
+    }
+
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 100%;
+        height: auto;
+        min-width: 0;
+        margin: 15px 0;
+    }
+
+    .service-card:hover {
+        width: 100%;
+
+        height: auto;
+    }
+
+    .service-card img {
+        height: 220px;
+    }
+
+    .service-card h3 {
+        font-size: 25px;
+    }
+
+    .service-card p {
+        font-size: 18px;
+    }
+
+    .rooms {
+        padding: 60px 15px;
+    }
+
+    .rooms-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .room-card {
+        width: 100%;
+        height: 400px;
+        min-width: 0;
+        margin: 15px 0;
+    }
+    .testimonial {
+        padding: 60px 15px;
+    }
+
+    .testimonial-container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .testimonial-card {
+        width: 100%;
+        height: auto;
+        min-height: 250px;
+        min-width: 0;
+        margin: 15px 0;
+        padding: 25px;
+    }
+
+    .testimonial-card p {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    .about-section {
+        flex-direction: column;
+    }
+
+    .about-image,
+    .about-content {
+        width: 100%;
+    }
+
+    .about-image {
+        height: 300px;
+    }
+
+    .about-content {
+        padding: 50px 20px;
+    }
+
+    .about-content h2 {
+        font-size: 30px;
+    }
+
+    .about-content p {
+        font-size: 18px;
+    }
+    .offer {
+        padding: 60px 15px;
+    }
+
+    .offer-container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .offer-card {
+        width: 100%;
+        min-width: 0;
+        margin: 10px 0;
+    }
+
+    .offer-card h3 {
+        font-size: 25px;
+    }
+
+    .offer-card p {
+        font-size: 18px;
+    }
+    footer {
+        padding: 50px 20px 25px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-box {
+        width: 100%;
+
+        min-width: 0;
+
+        margin-bottom: 30px;
+    }
+
+    .footer-box h2,
+    .footer-box h3 {
+        font-size: 25px;
+    }
+
+    .footer-box p,
+    .footer-box > a {
+        font-size: 18px;
+    }
+
+    .footer-bottom {
+        margin-top: 30px;
+    }
+
+    .footer-bottom p {
+        font-size: 16px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .navbar {
+        height: auto;
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .nav-links {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        font-size: 20px;
+        margin-right: 15px;
+        margin-bottom: 10px;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 40px 5%;
+        align-items: center;
+    }
+
+    .hero-content {
+        width: 70%;
+        top: 0;
+    }
+
+    .hero-content h1 {
+        font-size: 48px;
+    }
+
+    .hero-content p {
+        font-size: 20px;
+    }
+    .booking-section {
+        margin-top: 50px;
+        padding: 0 5%;
+    }
+
+    .booking-box {
+        width: 100%;
+        height: auto;
+        padding: 25px;
+    }
+
+    .booking-title {
+        font-size: 35px;
+        margin-bottom: 10px;
+    }
+
+    .booking-item {
+        flex: 0 0 42%;
+        min-width: 0;
+        margin: 10px;
+    }
+
+    .booking-button {
+        width: 42%;
+        margin: 10px;
+        margin-top: 43px;
+    }
+    .services {
+        padding: 70px 5%;
+    }
+
+    .service-card {
+        width: 45%;
+        min-width: 0;
+        margin: 15px;
+    }
+    .rooms {
+        padding: 70px 5%;
+    }
+
+    .room-card {
+        width: 45%;
+        margin: 15px;
+    }
+    .testimonial {
+        padding: 70px 5%;
+    }
+
+    .testimonial-card {
+        width: 45%;
+        min-width: 0;
+        height: auto;
+        margin: 15px;
+    }
+
+    .testimonial-card p {
+        font-size: 20px;
+    }
+
+    .about-content {
+        padding: 60px 6%;
+    }
+
+    .offer {
+        padding: 70px 5%;
+    }
+
+    .offer-card {
+        width: 45%;
+        min-width: 0;
+        margin: 15px;
+    }
+    .footer-box {
+        width: 45%;
+        min-width: 0;
+    }
+}

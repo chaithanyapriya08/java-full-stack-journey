@@ -1,0 +1,451 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+a {
+    text-decoration: none;
+}
+header {
+    width: 100%;
+}
+.top-bar {
+    background-color: #452001;
+    color: white;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+}
+.navbar {
+    height: 90px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.logo {
+   color: #2F2A26;
+    font-size: 30px;
+    font-weight: bold;
+}
+.logo span {
+    color: #c5a880;
+}
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+color: #333;
+  font-size: 25px;
+ margin-right: 25px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+   color: #452001;
+}
+.rooms-hero {
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)),
+        url("./images/room-bg.avif");
+    background-size: cover;
+    background-position: center;
+}
+
+.rooms-hero-content {
+    color: white;
+}
+
+.rooms-hero-content p {
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.rooms-hero-content p span {
+    margin: 0 10px;
+}
+
+.rooms-hero-content h1 {
+    font-size: 55px;
+}
+.rooms-section {
+    padding: 100px 8%;
+}
+
+.section-heading {
+    text-align: center;
+
+    margin-bottom: 60px;
+}
+
+.section-heading p {
+    color: #c5a880;
+    font-size: 25px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.section-heading h2 {
+    font-size: 50px;
+}
+.rooms-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   perspective: 600px;
+    gap: 35px;
+}
+.room-card {
+    width: 30%;
+    min-width: 280px;
+    background-color: #f7f7f7;
+    overflow: hidden;
+     transition: all 1s ease-in;
+     
+}
+.room-card:hover{
+    transform: translateZ(30px);
+}
+.room-image {
+    height: 250px;
+    position: relative;
+}
+
+.room-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+}
+
+
+.price {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color:  #452001;
+    color: white;
+    padding: 12px 18px;
+    font-size: 25px;
+}
+
+.price span {
+    font-size: 16px;
+}
+.room-content {
+    padding: 30px;
+}
+
+.room-content h3 {
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+.room-details {
+    margin-bottom: 25px;
+}
+
+.room-details p {
+    color: #777;
+    font-size: 25px;
+    line-height: 2;
+}
+.room-btn {
+    display: inline-block;
+    background-color: #452001;
+    color: white;
+    font-size: 18px;
+    padding: 13px 22px;
+    transition: 0.3s;
+}
+
+.room-btn:hover {
+    background-color: #222;
+}
+footer {
+    background-color: #5f2c02;
+    color: #aaa;
+    padding: 80px 8% 30px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-box {
+    width: 22%;
+    min-width: 200px;
+}
+
+.footer-box h2,
+.footer-box h3 {
+    color: black;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.footer-box p {
+    font-size: 25px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.footer-box > a {
+    display: block;
+    color: white;
+    font-size: 25px;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.footer-box > a:hover {
+    color: goldenrod;
+}
+
+.footer-box input {
+    width: 100%;
+    padding: 13px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
+}
+.footer-box button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.footer-box button:hover {
+    background-color: white;
+    color: #333;
+}
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tags span {
+    border: 1px solid #555;
+    padding: 7px 10px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.tags span:hover {
+    background-color: #c5a880;
+    color: white;
+    border-color: #c5a880;
+}
+.follow-title {
+    margin-top: 30px;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-links a {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background-color: #c5a880;
+}
+.footer-bottom {
+    border-top: 1px solid #444;
+    margin-top: 60px;
+    padding-top: 25px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 20px;
+}
+
+
+
+@media (max-width: 767px) {
+
+    .top-bar {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+
+    .navbar {
+        height: auto;
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        margin-right: 0;
+    }
+
+    .rooms-hero {
+        height: 350px;
+    }
+
+    .rooms-hero-content h1 {
+        font-size: 42px;
+    }
+
+    .rooms-section {
+        padding: 70px 7%;
+    }
+
+    .section-heading {
+        margin-bottom: 40px;
+    }
+
+    .section-heading p {
+        font-size: 18px;
+    }
+
+    .section-heading h2 {
+        font-size: 32px;
+    }
+
+    .rooms-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .room-card {
+        width: 100%;
+        min-width: 0;
+        margin: 15px 0;
+    }
+
+    .room-image {
+        height: 220px;
+    }
+
+    .room-content {
+        padding: 25px;
+    }
+
+    .room-content h3 {
+        font-size: 25px;
+    }
+
+    .room-details p {
+        font-size: 18px;
+    }
+
+    .footer-box {
+        width: 100%;
+    }
+
+}
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .navbar {
+        height: auto;
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        margin-right: 0;
+    }
+
+    .rooms-section {
+        padding: 70px 5%;
+    }
+
+    .section-heading {
+        margin-bottom: 45px;
+    }
+
+    .section-heading h2 {
+        font-size: 42px;
+    }
+
+    .rooms-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .room-card {
+        width: 45%;
+        min-width: 0;
+        margin: 15px;
+    }
+
+    .room-image {
+        height: 230px;
+    }
+
+    .room-content {
+        padding: 25px;
+    }
+
+    .room-content h3 {
+        font-size: 26px;
+    }
+
+    .room-details p {
+        font-size: 20px;
+    }
+
+    .footer-box {
+        width: 45%;
+    }
+
+}
